@@ -22,6 +22,8 @@
     <Compile Include="Platforms\All\**" />
     <Compile Include="Platforms\Android\**" Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'" />
     <Compile Include="Platforms\iOS\**" Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'" />
+    <Compile Include="Platforms\Apple\**" Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios' or $([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'" />
+    <Compile Include="Platforms\Windows\**" Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'" />
   </ItemGroup>
 
 </Project>
